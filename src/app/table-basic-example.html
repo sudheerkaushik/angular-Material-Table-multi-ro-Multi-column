@@ -1,0 +1,44 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="faultCategory">
+    <th mat-header-cell *matHeaderCellDef>Category</th>
+    <td mat-cell *matCellDef="let element" [attr.rowspan]="1">
+      {{element.faultCategory}}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="recordings">
+    <th mat-header-cell *matHeaderCellDef>Recordings</th>
+    <td mat-cell *matCellDef="let element">{{element.frequecnyIntervals}}</td>
+    <td mat-cell *matCellDef="let ele">{{ele.frequencyMaxLimit}}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="typeCategory">
+    <th mat-header-cell *matHeaderCellDef>Track Category</th>
+    <!-- <td mat-header-cell *matCellDef="let e">{{e.typeCategory}}</td> -->
+    <td mat-cell *matCellDef="let element">{{element.typeCategoryValue}}</td>
+  </ng-container>
+
+  <!-- <ng-container matColumnDef="header-row-first-group">
+    <th
+      mat-header-cell
+      *matHeaderCellDef
+      [style.text-align]="center"
+      [attr.colspan]="1"
+    >
+      Track Category
+    </th>
+  </ng-container> -->
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <!-- <tr mat-header-row *matHeaderRowDef="['header-row-first-group']"></tr> -->
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<!-- Copyright 2020 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
