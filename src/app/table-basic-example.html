@@ -12,15 +12,23 @@
 
   <ng-container matColumnDef="recordings">
     <th mat-header-cell *matHeaderCellDef>Recordings</th>
-    <td mat-cell *matCellDef="let element">{{element.frequecnyIntervals}}</td>
-    <td mat-cell *matCellDef="let ele">{{ele.frequencyMaxLimit}}</td>
+    <td mat-cell *matCellDef="let element">Recordings in WKS</td>
+    <td mat-cell *matCellDef="let e11">Max Interval</td>
+    <td mat-cell *matCellDef="let e21">Recordings in WKS</td>
+    <td mat-cell *matCellDef="let e31">Max Interval</td>
+    <!-- <td mat-cell *matCellDef="let element">{{element.frequecnyIntervals}}</td>
+    <td mat-column *matColumnDef="let ele">{{ele.frequencyMaxLimit}}</td> -->
   </ng-container>
 
   <!-- Name Column -->
   <ng-container matColumnDef="typeCategory">
     <th mat-header-cell *matHeaderCellDef>Track Category</th>
-    <!-- <td mat-header-cell *matCellDef="let e">{{e.typeCategory}}</td> -->
-    <td mat-cell *matCellDef="let element">{{element.typeCategoryValue}}</td>
+    <td mat-cell *matCellDef="let e">{{e.typeCategory}}</td>
+    <td mat-cell *matCellDef="let e1">{{e1.typeCategory}}</td>
+    <td mat-cell *matCellDef="let e2">{{e2.typeCategory}}</td>
+    <td mat-cell *matCellDef="let e3">{{e3.typeCategory}}</td>
+
+    <!-- <td mat-cell *matCellDef="let element">{{element.typeCategoryValue}}</td> -->
   </ng-container>
 
   <!-- <ng-container matColumnDef="header-row-first-group">
